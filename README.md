@@ -3,7 +3,7 @@ This repository is tracking Substrate's
 
 This repository is unsuitable for a production deployment, it was developed to be a Substrate Smart Contracts Node to support [Substrate Smart Contracts](https://use.ink/how-it-works) PoCs. The [crate](https://paritytech.github.io/substrate/master/pallet_contracts/index.html) [pallet-contracts](https://github.com/paritytech/substrate/tree/polkadot-v0.9.31/frame/contracts) for [WebAssembly](https://wiki.polkadot.network/docs/learn-wasm) [smart contracts](https://wiki.polkadot.network/docs/build-smart-contracts#smart-contract-environments-are-still-maturing) is configured for this Substrate Smart Contracts Node. 
 
-It's assumed that Rust is [configured and running](https://github.com/substrate-developer-hub/substrate-node-template/blob/main/docs/rust-setup.md).
+It's assumed that Rust is [configured and running](https://docs.substrate.io/install/).
 
 Test the outer node.
 ```bash
