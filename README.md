@@ -14,6 +14,12 @@ Note:Verify the tags in [here](https://github.com/paritytech/substrate-contracts
 cargo build --release
 ```
 
+```bash
+./target/release/node --dev
+```
+
+
+ 
 References:
 
 [StackExchange](https://substrate.stackexchange.com/)
