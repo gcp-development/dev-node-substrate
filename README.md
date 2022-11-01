@@ -5,6 +5,16 @@ This repository is unsuitable for a production deployment, it was developed to b
 
 The [crate](https://paritytech.github.io/substrate/master/pallet_contracts/index.html) [pallet-contracts](https://github.com/paritytech/substrate/tree/polkadot-v0.9.31/frame/contracts) for [WebAssembly](https://wiki.polkadot.network/docs/learn-wasm) [smart contracts](https://wiki.polkadot.network/docs/build-smart-contracts#smart-contract-environments-are-still-maturing) is configured for this Substrate Smart Contracts Node. 
 
+Test the outer node.
+```bash
+cargo check -p node --release
+```
+
+Test the runtime node.
+```bash
+cargo check -p node-runtime --release
+```
+
 Build the Substrate Smart Contracts Node.
 ```bash
 cargo build --release
@@ -22,7 +32,7 @@ Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
 References:
 
-[StackExchange](https://substrate.stackexchange.com/)
+[Substrate Stack Exchange](https://substrate.stackexchange.com/)
 
 [Smart Contracts](https://wiki.polkadot.network/docs/build-smart-contracts)
 
