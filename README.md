@@ -14,7 +14,7 @@ Run the Substrate Smart Contracts Node.
 ```bash
 ./target/release/node --dev
 ```
-Interact with our substrate node using the Contracts UI:
+Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
 [Contracts-UI](https://contracts-ui.substrate.io/?rpc=ws://127.0.0.1:9944)
  
