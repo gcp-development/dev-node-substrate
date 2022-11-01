@@ -24,11 +24,11 @@ Interact with our substrate node using the Contracts UI:
 
 [Contracts-UI](https://contracts-ui.substrate.io/?rpc=ws://127.0.0.1:9944)
  
+![image](https://user-images.githubusercontent.com/76512851/199269077-e29144e7-e288-41c0-be51-9060bc16aebd.png)
+
 References:
 
 [StackExchange](https://substrate.stackexchange.com/)
 
 [Smart Contracts](https://wiki.polkadot.network/docs/build-smart-contracts)
-
-![image](https://user-images.githubusercontent.com/76512851/199269077-e29144e7-e288-41c0-be51-9060bc16aebd.png)
 
