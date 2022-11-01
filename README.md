@@ -5,12 +5,12 @@ This repository is unsuitable for a production deployment, it was developed to b
 
 The [crate](https://paritytech.github.io/substrate/master/pallet_contracts/index.html) [pallet-contracts](https://github.com/paritytech/substrate/tree/polkadot-v0.9.31/frame/contracts) for [WebAssembly](https://wiki.polkadot.network/docs/learn-wasm) [smart contracts](https://wiki.polkadot.network/docs/build-smart-contracts#smart-contract-environments-are-still-maturing) were configured for this Substrate Smart Contracts Node. 
 
-Build the substrate Node
+Build the Substrate Smart Contracts Node.
 ```bash
 cargo build --release
 ```
 
-Run the substrate Node
+Run the Substrate Smart Contracts Node.
 ```bash
 ./target/release/node --dev
 ```
