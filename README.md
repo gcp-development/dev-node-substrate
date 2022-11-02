@@ -12,7 +12,6 @@ rustup show
 ```bash
 rustup +nightly show
 ```
-![image]()
 <img src="https://user-images.githubusercontent.com/76512851/199425772-8113e761-2728-40ae-8d78-68e38750a97b.png" width="1849" height="1128">
 
 Test the outer node.
