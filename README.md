@@ -5,6 +5,16 @@ This repository is unsuitable for a production deployment, it was developed to b
 
 It's assumed that Rust is [configured and running](https://docs.substrate.io/install/).
 
+```bash
+rustup show
+```
+![image](https://user-images.githubusercontent.com/76512851/199425508-587354a7-fd4a-49c6-9627-5bdcee3418c6.png)
+
+```bash
+rustup +nightly show
+```
+![image](https://user-images.githubusercontent.com/76512851/199425772-8113e761-2728-40ae-8d78-68e38750a97b.png)
+
 Test the outer node.
 ```bash
 cargo check -p node --release
