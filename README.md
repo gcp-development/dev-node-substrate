@@ -8,12 +8,12 @@ It's assumed that Rust is [configured and running](https://docs.substrate.io/ins
 ```bash
 rustup show
 ```
-<img src="https://user-images.githubusercontent.com/76512851/199425508-587354a7-fd4a-49c6-9627-5bdcee3418c6.png" width="150" height="280">
+<img src="https://user-images.githubusercontent.com/76512851/199425508-587354a7-fd4a-49c6-9627-5bdcee3418c6.png" width="1013" height="857">
 ```bash
 rustup +nightly show
 ```
 ![image]()
-<img src="https://user-images.githubusercontent.com/76512851/199425772-8113e761-2728-40ae-8d78-68e38750a97b.png" width="150" height="280">
+<img src="https://user-images.githubusercontent.com/76512851/199425772-8113e761-2728-40ae-8d78-68e38750a97b.png" width="1849" height="1128">
 
 Test the outer node.
 ```bash
