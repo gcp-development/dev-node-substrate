@@ -8,7 +8,7 @@ It's assumed that Rust is [configured and running](https://docs.substrate.io/ins
 ```bash
 rustup show
 ```
-<img src="https://user-images.githubusercontent.com/76512851/199425508-587354a7-fd4a-49c6-9627-5bdcee3418c6.png" width="550" height="400">
+<img src="https://user-images.githubusercontent.com/76512851/199425508-587354a7-fd4a-49c6-9627-5bdcee3418c6.png" width="500" height="350">
 
 ```bash
 rustup +nightly show
