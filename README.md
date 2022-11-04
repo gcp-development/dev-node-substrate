@@ -40,9 +40,7 @@ Interact with our Substrate Smart Contracts Node using the Contracts UI:
  
 ![image](https://user-images.githubusercontent.com/76512851/199269077-e29144e7-e288-41c0-be51-9060bc16aebd.png)
 
-References:
-
-[Substrate Stack Exchange](https://substrate.stackexchange.com/)
-
-[Smart Contracts](https://wiki.polkadot.network/docs/build-smart-contracts)
+References:<br/>
+[Substrate Stack Exchange](https://substrate.stackexchange.com/)<br/>
+[Smart Contracts](https://wiki.polkadot.network/docs/build-smart-contracts)<br/>
 
