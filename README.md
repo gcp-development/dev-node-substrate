@@ -33,7 +33,7 @@ cargo build --release
 
 Run the Substrate Smart Contracts Node.
 ```bash
-./target/release/node --dev
+./target/release/dev-node-substrate --dev
 ```
 Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
