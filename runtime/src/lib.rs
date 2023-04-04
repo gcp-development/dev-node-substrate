@@ -7,7 +7,10 @@
 include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 
 use frame_support::dispatch::DispatchClass;
-use frame_system::limits::{BlockLength, BlockWeights};
+use frame_system::{
+	limits::{BlockLength, BlockWeights},
+	EnsureSigned,
+};
 use sp_api::impl_runtime_apis;
 use sp_core::{crypto::KeyTypeId, OpaqueMetadata};
 use sp_runtime::{
@@ -24,9 +27,14 @@ use sp_version::RuntimeVersion;
 // A few exports that help ease life for downstream crates.
 pub use frame_support::{
 	construct_runtime, parameter_types,
-	traits::{ConstU128, ConstU32, ConstU8, KeyOwnerProofSystem, Randomness, StorageInfo},
+	traits::{
+		AsEnsureOriginWithArg, ConstBool, ConstU128, ConstU32, ConstU8, KeyOwnerProofSystem,
+		Randomness, StorageInfo,
+	},
 	weights::{
-		constants::{BlockExecutionWeight, ExtrinsicBaseWeight, RocksDbWeight, WEIGHT_PER_SECOND},
+		constants::{
+			BlockExecutionWeight, ExtrinsicBaseWeight, RocksDbWeight, WEIGHT_REF_TIME_PER_SECOND,
+		},
 		IdentityFee, Weight,
 	},
 	StorageValue,
@@ -110,7 +118,8 @@ const NORMAL_DISPATCH_RATIO: Perbill = Perbill::from_percent(75);
 const AVERAGE_ON_INITIALIZE_RATIO: Perbill = Perbill::from_percent(10);
 
 /// We allow for 2 seconds of compute with a 6 second average block time, with maximum proof size.
-const MAXIMUM_BLOCK_WEIGHT: Weight = WEIGHT_PER_SECOND.saturating_mul(2).set_proof_size(u64::MAX);
+const MAXIMUM_BLOCK_WEIGHT: Weight =
+	Weight::from_parts(WEIGHT_REF_TIME_PER_SECOND.saturating_mul(2), u64::MAX);
 
 // Prints debug output of the `contracts` pallet to stdout if the node is
 // started with `-lruntime::contracts=debug`.
@@ -284,6 +293,8 @@ impl pallet_assets::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 	type Balance = u128;
 	type AssetId = u32;
+	type AssetIdParameter = codec::Compact<u32>;
+	type CreateOrigin = AsEnsureOriginWithArg<EnsureSigned<AccountId>>;
 	type Currency = Balances;
 	type ForceOrigin = frame_system::EnsureRoot<AccountId>;
 	type AssetDeposit = AssetDeposit;
@@ -295,6 +306,8 @@ impl pallet_assets::Config for Runtime {
 	type Freezer = ();
 	type Extra = ();
 	type WeightInfo = pallet_assets::weights::SubstrateWeight<Runtime>;
+	type RemoveItemsLimit = ConstU32<1000>;
+	type CallbackHandle = ();
 }
 
 parameter_types! {
@@ -308,6 +321,13 @@ parameter_types! {
 		.max_total
 		.unwrap_or(RuntimeBlockWeights::get().max_block);
 	pub Schedule: pallet_contracts::Schedule<Runtime> = Default::default();
+}
+
+impl pallet_utility::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+	type RuntimeCall = RuntimeCall;
+	type PalletsOrigin = OriginCaller;
+	type WeightInfo = pallet_utility::weights::SubstrateWeight<Runtime>;
 }
 
 impl pallet_contracts::Config for Runtime {
@@ -343,6 +363,8 @@ impl pallet_contracts::Config for Runtime {
 	// just more lax.
 	type MaxCodeLen = ConstU32<{ 256 * 1024 }>;
 	type MaxStorageKeyLen = ConstU32<128>;
+	type MaxDebugBufferLen = ConstU32<{ 2 * 1024 * 1024 }>;
+	type UnsafeUnstableInterface = ConstBool<true>;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -354,6 +376,7 @@ construct_runtime!(
 		UncheckedExtrinsic = UncheckedExtrinsic,
 	{
 		System: frame_system,
+		Utility: pallet_utility,
 		RandomnessCollectiveFlip: pallet_randomness_collective_flip,
 		Timestamp: pallet_timestamp,
 		Balances: pallet_balances,
@@ -386,7 +409,7 @@ pub type SignedExtra = (
 pub type SignedPayload = generic::SignedPayload<RuntimeCall, SignedExtra>;
 /// Unchecked extrinsic type as expected by this runtime.
 pub type UncheckedExtrinsic =
-generic::UncheckedExtrinsic<Address, RuntimeCall, Signature, SignedExtra>;
+	generic::UncheckedExtrinsic<Address, RuntimeCall, Signature, SignedExtra>;
 /// Executive: handles dispatch to the various modules.
 pub type Executive = frame_executive::Executive<
 	Runtime,
@@ -522,7 +545,8 @@ impl_runtime_apis! {
 				gas_limit,
 				storage_deposit_limit,
 				input_data,
-				CONTRACTS_DEBUG_OUTPUT
+				CONTRACTS_DEBUG_OUTPUT,
+				pallet_contracts::Determinism::Deterministic,
 			)
 		}
 
@@ -553,9 +577,10 @@ impl_runtime_apis! {
 			origin: AccountId,
 			code: Vec<u8>,
 			storage_deposit_limit: Option<Balance>,
+			determinism: pallet_contracts::Determinism,
 		) -> pallet_contracts_primitives::CodeUploadResult<Hash, Balance>
 		{
-			Contracts::bare_upload_code(origin, code, storage_deposit_limit)
+			Contracts::bare_upload_code(origin, code, storage_deposit_limit, determinism)
 		}
 
 		fn get_storage(

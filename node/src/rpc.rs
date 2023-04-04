@@ -32,15 +32,15 @@ pub struct FullDeps<C, P> {
 pub fn create_full<C, P>(
 	deps: FullDeps<C, P>,
 ) -> Result<RpcModule<()>, Box<dyn std::error::Error + Send + Sync>>
-	where
-		C: ProvideRuntimeApi<Block>,
-		C: BlockBackend<Block>,
-		C: HeaderBackend<Block> + HeaderMetadata<Block, Error = BlockChainError> + 'static,
-		C: Send + Sync + 'static,
-		C::Api: substrate_frame_rpc_system::AccountNonceApi<Block, AccountId, Index>,
-		C::Api: pallet_transaction_payment_rpc::TransactionPaymentRuntimeApi<Block, Balance>,
-		C::Api: BlockBuilder<Block>,
-		P: TransactionPool + 'static,
+where
+	C: ProvideRuntimeApi<Block>,
+	C: BlockBackend<Block>,
+	C: HeaderBackend<Block> + HeaderMetadata<Block, Error = BlockChainError> + 'static,
+	C: Send + Sync + 'static,
+	C::Api: substrate_frame_rpc_system::AccountNonceApi<Block, AccountId, Index>,
+	C::Api: pallet_transaction_payment_rpc::TransactionPaymentRuntimeApi<Block, Balance>,
+	C::Api: BlockBuilder<Block>,
+	P: TransactionPool + 'static,
 {
 	use pallet_transaction_payment_rpc::{TransactionPayment, TransactionPaymentApiServer};
 	use substrate_frame_rpc_system::{System, SystemApiServer};
