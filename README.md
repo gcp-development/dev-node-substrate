@@ -55,7 +55,7 @@ Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
 [Contracts-UI](https://contracts-ui.substrate.io/?rpc=ws://127.0.0.1:9944)
  
-![image](https://user-images.githubusercontent.com/76512851/199269077-e29144e7-e288-41c0-be51-9060bc16aebd.png)
+![image](https://user-images.githubusercontent.com/76512851/230034898-3afb6aa8-fb0c-4e6d-b14b-e5274730deb1.png)
 
 [Polkadot/Substrate Portal](https://polkadot.js.org/apps/#/explorer)
 
