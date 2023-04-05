@@ -8,6 +8,8 @@ It's assumed that these software are installed and running:
   <li><a href="https://crates.io/crates/cargo-contract" target="_blank">cargo contract</a></li>
 </ul>
 
+This project was developed using the [Intellij Community](https://www.jetbrains.com/idea/download/#section=linux) with the [Rust plugin](https://www.jetbrains.com/rust/).
+
 <hr>
 
 This repository is tracking Substrate's
