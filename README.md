@@ -15,13 +15,13 @@ Note: the consensus from [aura](https://docs.substrate.io/reference/glossary/#au
 
 It's assumed that Rust is [configured and running](https://docs.substrate.io/install/).
 
-nightly version
+rustc version
 ```bash
 rustup show
 ```
 ![image](https://user-images.githubusercontent.com/76512851/229990984-24d9834e-4a98-4eb2-b97d-578641fdcadd.png)
 
-nightly version
+rustc +nightly version
 ```bash
 rustup +nightly show
 ```
