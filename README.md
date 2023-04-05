@@ -59,8 +59,7 @@ Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
 [Polkadot/Substrate Portal](https://polkadot.js.org/apps/#/explorer)
 
-![image](https://user-images.githubusercontent.com/76512851/201645371-283412c9-86a4-470d-8f80-dcd2dbd50cb8.png)
-
+![image](https://user-images.githubusercontent.com/76512851/230035721-c4936f8a-e025-48a3-8ce9-a3069f8b3c24.png)
 
 References:<br/>
 [Substrate Stack Exchange](https://substrate.stackexchange.com/)<br/>
