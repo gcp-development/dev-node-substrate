@@ -1,3 +1,12 @@
+It's assumed that these software are installed and running:
+
+<ul>
+  <li><a href="https://www.rust-lang.org/tools/install" target="_blank">Rust</a></li>
+  <li><a href="https://rust-lang.github.io/rustup/installation/index.html#installing-nightly" target="_blank">nightly</a></li>
+  <li><a href="https://github.com/paritytech/cargo-contract#installation" target="_blank">cargo contract</a></li>
+</ul>
+<hr>
+
 This repository is tracking Substrate's
 [`polkadot-v0.9.37`](https://github.com/paritytech/substrate/tree/polkadot-v0.9.37) branch.
 
@@ -16,6 +25,7 @@ rustup +nightly show
 ```
 ![image](https://user-images.githubusercontent.com/76512851/229991173-f393a3c7-478f-465a-bedb-b5f827aceddd.png)
 
+Verify the CLI tool which helps you develop smart contracts in Parity's ink!.
 ```bash
 cargo contract --version
 ```
