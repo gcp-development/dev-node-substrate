@@ -16,6 +16,12 @@ rustup +nightly show
 ```
 ![image](https://user-images.githubusercontent.com/76512851/229991173-f393a3c7-478f-465a-bedb-b5f827aceddd.png)
 
+```bash
+cargo contract --version
+```
+![image](https://user-images.githubusercontent.com/76512851/229992243-d014b1b6-7aa6-4150-b018-bb46795a7671.png)
+
+
 Test the outer node.
 ```bash
 cargo check -p node --release
