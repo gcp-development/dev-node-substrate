@@ -11,7 +11,7 @@ It's assumed that these software are installed and running:
 This repository is tracking Substrate's
 [`polkadot-v0.9.37`](https://github.com/paritytech/substrate/tree/polkadot-v0.9.37) branch.
 
-The dev-node-substrate is a simple Substrate blockchain which is configured to include the Substrate module for [smart contract](https://use.ink/how-it-works) development using [ink!4.0](https://github.com/paritytech/ink/releases/tag/v4.0.0).
+The dev-node-substrate is a simple Substrate blockchain which is configured to include the Substrate module for [smart contract](https://use.ink/how-it-works) development using [ink! v4.0](https://github.com/paritytech/ink/releases/tag/v4.0.0).
 
 <hr>
 
