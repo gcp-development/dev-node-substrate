@@ -10,7 +10,7 @@ It's assumed that these software are installed and running:
 This repository is tracking Substrate's
 [`polkadot-v0.9.37`](https://github.com/paritytech/substrate/tree/polkadot-v0.9.37) branch.
 
-The dev-node-substrate is a simple Substrate blockchain which is configured to include the Substrate module for smart contract developement using [ink!4.0](https://github.com/paritytech/ink/releases/tag/v4.0.0).
+The dev-node-substrate is a simple Substrate blockchain which is configured to include the Substrate module for smart contract development using [ink!4.0](https://github.com/paritytech/ink/releases/tag/v4.0.0).
 
 <hr>
 This repository is unsuitable for a production deployment, it was developed to be a Substrate Smart Contracts Node to support [Substrate Smart Contracts](https://use.ink/how-it-works) PoCs. The [crate](https://paritytech.github.io/substrate/master/pallet_contracts/index.html) [pallet-contracts](https://github.com/paritytech/substrate/tree/polkadot-v0.9.31/frame/contracts) for [WebAssembly](https://wiki.polkadot.network/docs/learn-wasm) [smart contracts](https://wiki.polkadot.network/docs/build-smart-contracts#smart-contract-environments-are-still-maturing) is configured for this Substrate Smart Contracts Node. <br/>
