@@ -28,9 +28,9 @@ The directory will be assigned with a Rust toolchain with [rustup override](http
 rustup show
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/230028584-f8af7919-7b64-4316-93c3-eceddc60095f.png)
+![image](https://user-images.githubusercontent.com/76512851/230036769-8f8cddee-17b8-4c39-808a-7d26e068f11e.png)
 
-Note:The nightly-2023-01-01 is set by the [rust-toolchain.toml](https://github.com/gcp-development/dev-node-substrate/blob/main/rust-toolchain.toml) file.
+Note:The nightly-2023-02-09 is set by the [rust-toolchain.toml](https://github.com/gcp-development/dev-node-substrate/blob/main/rust-toolchain.toml) file.
 
 Test the outer node.
 ```bash
@@ -51,6 +51,9 @@ Run the Substrate Smart Contracts Node.
 ```bash
 ./target/release/dev-node-substrate --dev
 ```
+
+![image](https://user-images.githubusercontent.com/76512851/230036266-13f97ce3-8d37-4e3d-adca-c969aa46dd59.png)
+
 Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
 [Contracts-UI](https://contracts-ui.substrate.io/?rpc=ws://127.0.0.1:9944)
@@ -64,4 +67,3 @@ Interact with our Substrate Smart Contracts Node using the Contracts UI:
 References:<br/>
 [Substrate Stack Exchange](https://substrate.stackexchange.com/)<br/>
 [Smart Contracts](https://wiki.polkadot.network/docs/build-smart-contracts)<br/>
-
