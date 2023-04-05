@@ -3,7 +3,7 @@ It's assumed that these software are installed and running:
 <ul>
   <li><a href="https://www.rust-lang.org/tools/install" target="_blank">Rust</a></li>
   <li><a href="https://rust-lang.github.io/rustup/installation/index.html#installing-nightly" target="_blank">nightly</a></li>
-  <li><a href="https://github.com/paritytech/cargo-contract#installation" target="_blank">cargo contract</a></li>
+  <li><a href="https://crates.io/crates/cargo-contract" target="_blank">cargo contract</a></li>
 </ul>
 <hr>
 
@@ -15,17 +15,19 @@ Note: the consensus from [aura](https://docs.substrate.io/reference/glossary/#au
 
 It's assumed that Rust is [configured and running](https://docs.substrate.io/install/).
 
+nightly version
 ```bash
 rustup show
 ```
 ![image](https://user-images.githubusercontent.com/76512851/229990984-24d9834e-4a98-4eb2-b97d-578641fdcadd.png)
 
+nightly version
 ```bash
 rustup +nightly show
 ```
 ![image](https://user-images.githubusercontent.com/76512851/229991173-f393a3c7-478f-465a-bedb-b5f827aceddd.png)
 
-Verify the CLI tool which helps you develop smart contracts in Parity's ink!.
+ink! CLI version.
 ```bash
 cargo contract --version
 ```
