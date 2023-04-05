@@ -54,6 +54,8 @@ Run the Substrate Smart Contracts Node.
 
 ![image](https://user-images.githubusercontent.com/76512851/230036266-13f97ce3-8d37-4e3d-adca-c969aa46dd59.png)
 
+<hr>
+
 Interact with our Substrate Smart Contracts Node using the Contracts UI:
 
 [Contracts-UI](https://contracts-ui.substrate.io/?rpc=ws://127.0.0.1:9944)
