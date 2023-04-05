@@ -5,15 +5,17 @@ It's assumed that these software are installed and running:
   <li><a href="https://rust-lang.github.io/rustup/installation/index.html#installing-nightly" target="_blank">nightly</a></li>
   <li><a href="https://crates.io/crates/cargo-contract" target="_blank">cargo contract</a></li>
 </ul>
+
 <hr>
 
 This repository is tracking Substrate's
 [`polkadot-v0.9.37`](https://github.com/paritytech/substrate/tree/polkadot-v0.9.37) branch.
 
-The dev-node-substrate is a simple Substrate blockchain which is configured to include the Substrate module for smart contract development using [ink!4.0](https://github.com/paritytech/ink/releases/tag/v4.0.0).
+The dev-node-substrate is a simple Substrate blockchain which is configured to include the Substrate module for [smart contract](https://use.ink/how-it-works) development using [ink!4.0](https://github.com/paritytech/ink/releases/tag/v4.0.0).
 
 <hr>
-This repository is unsuitable for a production deployment, it was developed to be a Substrate Smart Contracts Node to support [Substrate Smart Contracts](https://use.ink/how-it-works) PoCs. The [crate](https://paritytech.github.io/substrate/master/pallet_contracts/index.html) [pallet-contracts](https://github.com/paritytech/substrate/tree/polkadot-v0.9.31/frame/contracts) for [WebAssembly](https://wiki.polkadot.network/docs/learn-wasm) [smart contracts](https://wiki.polkadot.network/docs/build-smart-contracts#smart-contract-environments-are-still-maturing) is configured for this Substrate Smart Contracts Node. <br/>
+
+This repository is unsuitable for a production deployment, it was developed to be a Substrate Smart Contracts Node to support [Substrate Smart Contracts] PoCs. The [crate](https://paritytech.github.io/substrate/master/pallet_contracts/index.html) [pallet-contracts](https://github.com/paritytech/substrate/tree/polkadot-v0.9.31/frame/contracts) for [WebAssembly](https://wiki.polkadot.network/docs/learn-wasm) [smart contracts](https://wiki.polkadot.network/docs/build-smart-contracts#smart-contract-environments-are-still-maturing) is configured for this Substrate Smart Contracts Node. <br/>
 Note: the consensus from [aura](https://docs.substrate.io/reference/glossary/#authority-round-aura)  & grandpa[(GHOST-based Recursive ANcestor Deriving Prefix Agreement)](https://wiki.polkadot.network/docs/learn-consensus#finality-gadget-grandpa) was changed to manual-seal([sp_consensus](https://docs.rs/sp-consensus/latest/sp_consensus/)/[sc_consensus](https://docs.rs/sc-consensus/latest/sc_consensus/)) where blocks are authored at every transaction.
 
 It's assumed that Rust is [configured and running](https://docs.substrate.io/install/).
