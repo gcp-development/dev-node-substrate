@@ -9,12 +9,12 @@ It's assumed that Rust is [configured and running](https://docs.substrate.io/ins
 ```bash
 rustup show
 ```
-<img src="https://user-images.githubusercontent.com/76512851/199425508-587354a7-fd4a-49c6-9627-5bdcee3418c6.png" width="500" height="350">
+![image](https://user-images.githubusercontent.com/76512851/229990984-24d9834e-4a98-4eb2-b97d-578641fdcadd.png)
 
 ```bash
 rustup +nightly show
 ```
-<img src="https://user-images.githubusercontent.com/76512851/199425772-8113e761-2728-40ae-8d78-68e38750a97b.png" width="650" height="400">
+![image](https://user-images.githubusercontent.com/76512851/229991173-f393a3c7-478f-465a-bedb-b5f827aceddd.png)
 
 Test the outer node.
 ```bash
