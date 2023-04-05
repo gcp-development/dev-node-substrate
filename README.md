@@ -17,24 +17,18 @@ Note: the consensus from [aura](https://docs.substrate.io/reference/glossary/#au
 
 <hr>
 
-rustc version
-```bash
-rustup show
-```
-![image](https://user-images.githubusercontent.com/76512851/229990984-24d9834e-4a98-4eb2-b97d-578641fdcadd.png)
-
-rustc +nightly version
-```bash
-rustup +nightly show
-```
-![image](https://user-images.githubusercontent.com/76512851/229991173-f393a3c7-478f-465a-bedb-b5f827aceddd.png)
-
 ink! CLI version.
 ```bash
 cargo contract --version
 ```
-![image](https://user-images.githubusercontent.com/76512851/229992243-d014b1b6-7aa6-4150-b018-bb46795a7671.png)
 
+The directory will be assigned with a Rust toolchain with [rustup override](https://rust-lang.github.io/rustup/overrides.html#directory-overrides).
+
+```bash
+rustup show
+```
+
+![image](https://user-images.githubusercontent.com/76512851/230028584-f8af7919-7b64-4316-93c3-eceddc60095f.png)
 
 Test the outer node.
 ```bash
