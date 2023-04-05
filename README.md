@@ -30,6 +30,8 @@ rustup show
 
 ![image](https://user-images.githubusercontent.com/76512851/230028584-f8af7919-7b64-4316-93c3-eceddc60095f.png)
 
+Note:The nightly-2023-01-01 is set by the [rust-toolchain.toml](https://github.com/gcp-development/dev-node-substrate/blob/main/rust-toolchain.toml) file.
+
 Test the outer node.
 ```bash
 cargo check -p node --release
