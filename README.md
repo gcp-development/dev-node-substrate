@@ -17,7 +17,7 @@ Note: the consensus from [aura](https://docs.substrate.io/reference/glossary/#au
 
 <hr>
 
-ink! CLI version.
+[ink! CLI version](https://use.ink/getting-started/setup#ink-cli).
 ```bash
 cargo contract --version
 ```
