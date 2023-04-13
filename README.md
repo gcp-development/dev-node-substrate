@@ -26,6 +26,9 @@ Note: the consensus from [aura](https://docs.substrate.io/reference/glossary/#au
 cargo contract --version
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/231824713-4cf9311c-800d-49a0-a5a8-ef244e0031c7.png)
+
+
 The directory will be assigned with a Rust toolchain with [rustup override](https://rust-lang.github.io/rustup/overrides.html#directory-overrides).
 
 ```bash
